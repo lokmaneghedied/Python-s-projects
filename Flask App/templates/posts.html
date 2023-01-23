@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title> POSTS </title>
+{% endblock %}
+
+{% block body %}
+    {% for post in posts %}
+        <h3> {{post.title}} </h3>
+        <p> {{post.content}} </p>
+        {% if post.author %}
+            <small>writen by: {{post.author}} </small> 
+        {% else %}
+            <small> Author not available </small>
+        {% endif %}
+        <br>
+        <br>
+        <a class="btn btn-danger" href="/posts/delete/{{post.id}}">DELETE</a>
+        <a class="btn btn-success" href="/posts/edit/{{post.id}}">EDIT</a>
+        <hr>
+    {% endfor %}
+{% endblock %}
