@@ -49,7 +49,7 @@ def add_time(start, duration, day=False):
 
 
 
-add_time("3:30 PM", "2:12")
+print(add_time("3:30 PM", "2:12"))
 #expected = "5:42 PM"
 
 #actual = add_time("11:55 AM", "3:12")
